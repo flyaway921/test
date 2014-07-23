@@ -1,0 +1,14 @@
+RULE mulity rules2
+CLASS ReturnTest
+METHOD method() 
+AT ENTRY
+IF TRUE
+DO System.out.println("****** return false at antry ******");return false;DO traceStack("found the caller!\n", 10)
+
+ENDRULE
+
+
+
+
+
+

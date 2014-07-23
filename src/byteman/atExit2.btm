@@ -1,0 +1,8 @@
+RULE test and reassign local variable
+CLASS AtExit2
+METHOD method
+AT EXIT
+IF true
+DO $localBoolean = false;
+ENDRULE
+

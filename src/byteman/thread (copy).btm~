@@ -1,0 +1,11 @@
+RULE trace thread start 
+
+CLASS KillJvm
+
+METHOD start() 
+
+IF true 
+
+DO traceln("*** start for thread: "+ $0.getName()) 
+
+ENDRULE

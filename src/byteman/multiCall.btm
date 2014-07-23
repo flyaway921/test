@@ -1,0 +1,11 @@
+RULE trace thread start 
+
+CLASS MultiCall
+
+METHOD method() 
+
+IF true 
+
+DO System.out.println("calling method !");
+
+ENDRULE

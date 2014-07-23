@@ -1,0 +1,8 @@
+RULE test and reassign local variable
+CLASS AtExit
+METHOD method
+AT EXIT
+IF true
+DO $localInt = 20;return $localInt;
+ENDRULE
+

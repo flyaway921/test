@@ -1,0 +1,25 @@
+RULE mulity rules1
+
+CLASS KillJvm
+
+METHOD method() 
+
+AT EXIT
+
+IF TRUE
+
+DO System.out.println("rules 1");
+ENDRULE
+
+RULE mulity rules2
+
+CLASS KillJvm
+
+METHOD method() 
+
+AT ENTRY 
+
+IF TRUE
+
+DO System.out.println("rules 2");
+ENDRULE

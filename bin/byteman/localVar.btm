@@ -1,0 +1,12 @@
+RULE test and reassign local variable
+CLASS LocalVar
+METHOD method
+AT EXIT 
+IF true
+DO traceln("***value of b is " + $b);
+   $b = false;
+   return $b;
+ENDRULE
+
+
+

@@ -1,0 +1,12 @@
+RULE kill thread  
+
+CLASS KillJvm
+
+METHOD method() 
+
+IF true 
+
+#DO 
+
+DO System.out.println("kill thread !");killThread()
+ENDRULE

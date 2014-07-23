@@ -1,0 +1,25 @@
+RULE mulity rules2
+CLASS AfterWrite
+METHOD method() 
+AT ENTRY
+IF TRUE
+DO System.out.println("**************AT ENTRY************* current is: "+$0.method);
+ENDRULE
+
+RULE mulity rules1
+CLASS AfterWrite
+METHOD method() 
+AFTER WRITE AfterWrite.member
+IF TRUE
+DO System.out.println("**************after write************* current is: "+$0.member);
+ENDRULE
+
+
+RULE trace Object.finalize at initial call
+CLASS ^java.lang.Object
+METHOD finalize
+IF NOT callerEquals("finalize")
+DO System.out.println("Finalizing " + $0)
+ENDRULE
+
+

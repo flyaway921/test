@@ -1,0 +1,22 @@
+package byteman;
+
+public class MultiCall{
+	public static void main(String[] args){
+	 try{
+	  Thread.sleep(20000);
+	}catch (Exception e){
+		e.printStackTrace();
+	}
+	  System.out.println("before method");
+	  new MultiCall().method();
+	  new MultiCall().method();
+          new MultiCall().method();
+	  System.out.println("after method");
+	}
+	
+	public void method(){
+		System.out.println("this is MultiCall method");
+	
+	}
+
+}

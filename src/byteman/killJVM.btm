@@ -1,0 +1,12 @@
+RULE trace thread start 
+
+CLASS KillJvm
+
+METHOD method() 
+
+IF true 
+
+#DO 
+
+DO System.out.println("******************** $0"+$0); System.out.println("another line!");debug("killing JVM"),  killJVM()
+ENDRULE
